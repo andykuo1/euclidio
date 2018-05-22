@@ -8,7 +8,7 @@ addListener('load', window, function() {
 	}
 
 	/**Add website content*/
-	var addr = "euclidio";
+	var addr = "/euclidio";
 	var title = document.getElementById('title');
 	var info = document.getElementById('info');
 
