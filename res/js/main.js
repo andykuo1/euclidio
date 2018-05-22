@@ -25,28 +25,28 @@ addListener('load', window, function() {
 
 	/**Add navigation bar content*/
 	var navlist = document.getElementById('navbar-content');
-	navlist.appendChild(createListItemLink('Proofs', '00_proofs/00_index.html', true));
-	navlist.appendChild(createListItemLink('Neutral Geometry', '01_neutral_geometry/00_index.html', true));
-	navlist.appendChild(createListItemLink('Euclidean Geometry', '02_euclidean_geometry/00_index.html', true));
-	navlist.appendChild(createListItemLink('Analytic Geometry', '03_analytic_geometry/alt.html', true));
-	navlist.appendChild(createListItemLink('Inversive Geometry', '04_inversive_geometry/alt.html', true));
-	navlist.appendChild(createListItemLink('Hyperbolic Geometry', '05_hyperbolic_geometry/alt.html', true));
+	navlist.appendChild(createListItemLink('Proofs', '/00_proofs/00_index.html', true));
+	navlist.appendChild(createListItemLink('Neutral Geometry', '/01_neutral_geometry/00_index.html', true));
+	navlist.appendChild(createListItemLink('Euclidean Geometry', '/02_euclidean_geometry/00_index.html', true));
+	navlist.appendChild(createListItemLink('Analytic Geometry', '/03_analytic_geometry/alt.html', true));
+	navlist.appendChild(createListItemLink('Inversive Geometry', '/04_inversive_geometry/alt.html', true));
+	navlist.appendChild(createListItemLink('Hyperbolic Geometry', '/05_hyperbolic_geometry/alt.html', true));
 
 
 	var sidelist = document.getElementById('sidebar-content');
-	sidelist.appendChild(createListItemHeadLink('Proofs', '00_proofs/00_index.html'));
-	sidelist.appendChild(createListItemLink('Direct Proofs', '00_proofs/01_direct_proofs.html'));
-	sidelist.appendChild(createListItemLink('Exhaustion', '00_proofs/02_exhaustion.html'));
-	sidelist.appendChild(createListItemLink('Induction', '00_proofs/03_induction.html'));
-	sidelist.appendChild(createListItemLink('Contradiction', '00_proofs/04_contradiction.html'));
-	sidelist.appendChild(createListItemLink('Contrapositive', '00_proofs/05_contrapositive.html'));
-	sidelist.appendChild(createListItemHeadLink('Neutral Geometry', '01_euclidean_plane/00_index.html'));
-	sidelist.appendChild(createListItemLink('', '01_euclidean_plane/01_affine_axioms.html'));
-	sidelist.appendChild(createListItemLink('Basic Theorems in Affine Geometry', '01_euclidean_plane/02_affine_theorems.html'));
-	sidelist.appendChild(createListItemLink('Euclidean Postulates', '01_euclidean_plane/03_euclidean_postulates.html'));
-	sidelist.appendChild(createListItemHeadLink('Triangles and Proportions(INDEV)', ''));
-	sidelist.appendChild(createListItemHeadLink('Polygons(INDEV)', ''));
-	sidelist.appendChild(createListItemHeadLink('Circles(INDEV)', ''));
+	sidelist.appendChild(createListItemHeadLink('Proofs', '/00_proofs/00_index.html'));
+	sidelist.appendChild(createListItemLink('Direct Proofs', '/00_proofs/01_direct_proofs.html'));
+	sidelist.appendChild(createListItemLink('Exhaustion', '/00_proofs/02_exhaustion.html'));
+	sidelist.appendChild(createListItemLink('Induction', '/00_proofs/03_induction.html'));
+	sidelist.appendChild(createListItemLink('Contradiction', '/00_proofs/04_contradiction.html'));
+	sidelist.appendChild(createListItemLink('Contrapositive', '/00_proofs/05_contrapositive.html'));
+	sidelist.appendChild(createListItemHeadLink('Neutral Geometry', '/01_neutral_geometry/00_index.html'));
+	sidelist.appendChild(createListItemLink('', '/01_neutral_geometry/01_affine_axioms.html'));
+	sidelist.appendChild(createListItemLink('Basic Theorems in Affine Geometry', '/01_neutral_geometry/02_affine_theorems.html'));
+	sidelist.appendChild(createListItemLink('Euclidean Postulates', '/01_neutral_geometry/03_euclidean_postulates.html'));
+	sidelist.appendChild(createListItemHeadLink('Triangles and Proportions(INDEV)', '/'));
+	sidelist.appendChild(createListItemHeadLink('Polygons(INDEV)', '/'));
+	sidelist.appendChild(createListItemHeadLink('Circles(INDEV)', '/'));
 	//sidelist.appendChild(createListItemHeadLink('Cartesian Plane', ''));
 	//.appendChild(createListItemHeadLink('Trigonometric Functions', ''));
 	//sidelist.appendChild(createListItemHeadLink('Trigonometric Laws', ''));
