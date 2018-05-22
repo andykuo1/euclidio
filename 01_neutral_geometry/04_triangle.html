@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eihamburger.css' />
+	<script type='text/javascript' src='../lib/ei/eihamburger.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><div class='ei-hamburger' onclick='toggleSideBar(this)'></div></li>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h1>Triangles</h1>
+		<article>
+			<p>
+				To understand angles, we must understand more about the simplest closed group they form, a triangle.
+			</p>
+		</article>
+		<p>
+			The following triangle proof relates lines and how they intersect triangle. It will form the basis for many triangle proofs
+		</p>
+		<div class='ei-example'>
+			<h3>Corollary 4.1: Pasch's Lemma</h3>
+			<p>If a line $l$ intersects a side of a triangle $\triangle ABC$ at a point other than a vertex, then $l$ intersects another side of the triangle. If $l$ intersects all three sides of $\triangle ABC$, then it must intersect two of the sides at a vertex.</p>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>A line $l$ intersect $\overline AB$ and let $P$ be the intersection point</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Case 1: If $C$ lies on $l$, $C$ is the intersection of $l$ and both $\overline AC$ and $\overline BC$</td>
+					<td>(Will be proved in the Crossbar Theorem)</td>
+				</tr>
+				<tr>
+					<td>Case 2: If $C$ lies on the same side of $l$ as $A$, $\overline BC$ intersects $l$ but not $\overline AC$</td>
+					<td>Plane Separation Axiom</td>
+				</tr>
+				<tr>
+					<td>Case 3: If $C$ lies on the same side of $l$ as $B$, $\overline AC$ intersects $l$ but not $\overline BC$</td>
+					<td>Plane Separation Axiom</td>
+				</tr>
+			</table>
+		</div>
+		<p>Pasch's Lemma proves the case when a line intersects a triangle from a side, not from a vertex. The following theorem will prove the other case.</p>
+		<div class='ei-panel'>
+			<h2>Def 4.1: Angle Interior</h2>
+			<p>
+				A point lies in the interior or is an interior point of an angle $\angle BAC$ if: <br />
+				1. it is on the same side of $\overline AB$ as $C$
+				2. it is on the same side of AC as B
+			</p>
+		</div>
+		<div class='ei-example'>
+			<h3>Theorem 4.2: Crossbar Theorem</h3>
+			<p>If $D$ is an interior point of angle $\angle BAC$, then the ray $\overrightarrow AD$ intersects $\overline BC$.</p>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>A line $l$ intersect $\overline AB$ and let $P$ be the intersection point</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Case 1: If $C$ lies on $l$, $C$ is the intersection of $l$ and both $\overline AC$ and $\overline BC$</td>
+					<td>(Will be proved in the Crossbar Theorem)</td>
+				</tr>
+				<tr>
+					<td>Case 2: If $C$ lies on the same side of $l$ as $A$, $\overline BC$ intersects $l$ but not $\overline AC$</td>
+					<td>Plane Separation Axiom</td>
+				</tr>
+				<tr>
+					<td>Case 3: If $C$ lies on the same side of $l$ as $B$, $\overline AC$ intersects $l$ but not $\overline BC$</td>
+					<td>Plane Separation Axiom</td>
+				</tr>
+			</table>
+		</div>
+		<p>Fusce maximus metus vitae porttitor sodales. Proin eget placerat orci, a tincidunt diam. Aenean nec lorem vitae turpis congue aliquam. Mauris ut turpis at magna tincidunt volutpat. Morbi sodales nulla quis turpis ultricies tristique ac vel sem. Nunc tempor a dolor et auctor. Vivamus molestie velit vitae lacus blandit convallis. Donec libero est, sagittis ac risus eu, posuere venenatis lorem. Mauris vitae commodo magna, in efficitur risus. Etiam molestie bibendum odio, vestibulum convallis urna luctus non.</p>
+		
+	</div>
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

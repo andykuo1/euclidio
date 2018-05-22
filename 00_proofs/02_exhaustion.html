@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<article>
+			<h1>Proof By Case / Exhaustion</h1>
+			<p>
+				Proof by cases or (Method of Exhaustion) goes about by decomposing a problem into several cases and then proving each of these simpler cases to conclude the proof. Although the process is straightforward, when there are many cases, such as the Four Color
+				Theorem or Proof of Kepler's Conjecture, the process can become tedious as there can be thousands of cases that need to be tested. This process can only be used if there are a finite process. For a problem requiring an infinite number of cases, see
+				<a href='02_induction.html'>Proof by Induction</a>
+			</p>
+		</article>
+
+		<hr/>
+
+		<div class='ei-example'>
+			<h3>Ex. 1: Prove that for any two real numbers, $x$ and $y$, $\left|{xy}\right|=\left|{x}\right|\left|{y}\right|$</h3>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$x$ and $y$ are real numbers</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Every real number $x$ falls into one of three categories: $x>0$, $x=0$, and $x&lt;0$. The same is true for $y$. </td>
+							<td>This is true a real number can be either positive, zero, or negative.
+							</td>
+				</tr>
+				<tr>
+					<td>Suppose $x=0$ or $y=0$, $\left|{xy}\right|=0$ and $\left|{x}\right|{y}=0$</td>
+					<td>Proof By Cases where $x=0$ or $y=0$</td>
+				</tr>
+				<tr>
+					<td>Suppose $x&gt;0$ and $y&gt;0$ or $x&lt;0$ and $y&lt;0$ (ie. they are both the same sign), $\left|{xy}\right|=xy$ $\left|{x}\right|\left|{y}\right|=xy$</td>
+							<td>Proof By Cases where x and y have the same sign</td>
+				</tr>
+				<tr>
+					<td>Suppose $x&gt;0$ and $y&lt;0$ or $x&lt;0$ and $y&gt;0$ (ie. they are both opposite signs), $\left|{xy}\right|=xy$ $\left|{x}\right|\left|{y}\right|=xy$</td>
+					<td>Proof By Cases where x and y have opposite signs</td>
+				</tr>
+			</table>
+		</div>
+
+		<hr/>
+
+		<div class='ei-example'>
+			<h3>Ex. 2: Prove that every cube number is divisible by 9, 1 more than a number divisible by 9 or 1 less than a number divisible by 9.</h3>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is an integer, then $n^3$ gives every cube number</td>
+					<td>Given, Definition of Cube Number</td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $3k-1$, $3k$, $3k+1$</td>
+					<td>This is true because $3k-1= 2$ (mod 3)
+						<br /> $3k= 0$ (mod 3)
+						<br /> $3k+1= 1$ (mod 3).
+						<br /> Another way of saying it is that a remainder of any integer divided by 3 is either going to be 0, 1, or 2.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k+1$, $n^3=(3k+1)^3=27k^3+27k^2+9k+1=9(3k^3+3k^2+k)+1$</td>
+					<td>Proof By Cases where $n=3k+1$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k$, $n^3=27k^3=9(3k^3)$</td>
+					<td>Proof By Cases where $n=3k$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k-1$, $n^3=(3k-1)^3=27k^3-27k^2+9k-1=9(3k^3-3k^2+k)-1$</td>
+					<td>Proof By Cases where $n=3k-1$</td>
+				</tr>
+			</table>
+		</div>
+
+		<hr/>
+
+		<div class='ei-example'>
+			<h3>Ex. 3: Prove that if $n$ is an integer, $n^7-n$ is divisible by 7. </h3>
+			<p>Let's reduce the problem, to make the problem easier to solve by factoring $n^7-n$</p>
+			<div lang='latex'>n^7-n=n(n^6-1)=n(n^3+1)(n^3-1)=n(n+1)(n^2-n+1)(n-1)(n^2+n-1)</div>
+			<p>If any of these terms divide by 7, then that case is complete.</p>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$n$ is an integer</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $7k$, $7k+1$, $7k+2$, $7k+3$, $7k+4$, $7k+5$, $7k+6$</td>
+					<td>This is true because $7k= 0$ (mod 7)
+						<br /> $7k+1= 1$ (mod 7)
+						<br /> $7k+2= 2$ (mod 7)
+						<br /> ...
+						<br /> $7k+6= 6$ (mod 7)
+						<br /> Another way of saying it is that a remainder of any integer divided by 7 is either going to be 0, 1, 2, ..., 6.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k$, the $n$ term is $7k$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+1$, the $n-1$ term is $7k$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+1$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+2$, the $n^2+n+1$ term is $(7k+2)^2+(7k+2)+1=(49k^2+28k+4)+(7k+2)+1=49k^2+35k+7=7(7k^2+5k+1)$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+2$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+3$, the $n^2-n+1$ term is $(7k+3)^2-(7k+3)+1=(49k^2+42k+9)-(7k+3)+1=49k^2+35k+7=7(7k^2+5k+1)$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+3$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+4$, the $n^2+n+1$ term is $(7k+4)^2+(7k+4)+1=(49k^2+56k+16)+(7k+4)+1=49k^2+63k+21=7(7k^2+9k+3)$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+4$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+5$, the $n^2-n+1$ term is $(7k+5)^2-(7k+5)+1=(49k^2+70k+25)-(7k+5)+1=49k^2+63k+21=7(7k^2+9k+3)$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+5$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $7k+6$, the $n+1$ term is $7k+7$, which is divisible by 7</td>
+					<td>Proof By Cases where $n=7k+6$</td>
+				</tr>
+			</table>
+			<p>One begins to notice that in general, to prove polynomials with divisibility of number, $a$, one can just calculate the constants. Using Binomial Theorem, one can see the pattern</p>
+			<div lang='latex'>(ax+b)^n=(ax)^n+\binom{n}{1}(ax)^{n-1}b+...+\binom{n}{n-1}(ax)b^{n-1}+b^n</div>
+			<div lang='latex'>(ax+b)^n=a\Bigg [a^{n-1}x^n+\binom{n}{1}a^{n-2}x^{n-1}b+...+\binom{n}{n-1}xb^{n-1}\Bigg ]+b^n</div>
+			<p>As long as the $b^n$ term is divisible by $a$, the term $(ax+b)^n$ is divisible by a. Repeating the same for $(ax+b)^{n-1}$, $(ax+b)^{n-2}$ ... and so on results in the following theorem.</p>
+		</div>
+
+		<div class='ei-panel'>
+			<h2>Theorem 1.1</h2>
+			<p>An integer, $a$, is a factor for any polynomial, $P(x)=a_0+a_1x+a_2x^2+...+a_nx^n$, in the domain of integers if for each residue class modulo a, called $b$, $a_0-a_1b+a_2b^2-...+(-1)^na_nb^n$ must also be divisible by $a$. </p>
+		</div>
+
+		<hr/>
+
+		<div class='ei-example'>
+			<h3>Ex. 4: Prove that if n is an integer, $n^9-n$ is divisible by 30.</h3>
+			<div lang='latex'>n^9-n=n(n^8-1)=n(n^4-1)(n^4+1)=n(n^2-1)(n^2+1)(n^4+1)=n(n-1)(n+1)(n^2+1)(n^4+1)</div>
+			<h4>Proposition 4.1: If n is an integer, $n^9-n$ is divisible by 2 </h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$n$ is an integer</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $2k$, $2k+1$</td>
+					<td>This is true because $2k= 0$ (mod 2)
+						<br /> $2k+1= 1$ (mod 2)
+						<br /> Another way of saying it is that a remainder of any integer divided by 2 is either going to be 0, 1.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $2k$, the $n$ term is $2k$, which is divisible by 2</td>
+					<td>Proof By Cases where $n=2k$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $2k+1$, the $n-1$ term is $2k$, which is divisible by 2</td>
+					<td>Proof By Cases where $n=2k+1$</td>
+				</tr>
+			</table>
+			<h4>Proposition 4.2: If n is an integer, $n^9-n$ is divisible by 3 </h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$n$ is an integer</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $3k$, $3k+1$, $3k+2$</td>
+					<td>This is true because $3k= 0$ (mod 3)
+						<br /> $3k+1= 1$ (mod 3)
+						<br /> $3k+2= 2$ (mod 3)
+						<br /> Another way of saying it is that a remainder of any integer divided by 3 is either going to be 0, 1, 2.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k$, the $n$ term is $3k$, which is divisible by 3</td>
+					<td>Proof By Cases where $n=3k$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k+1$, the $n-1$ term is $3k$, which is divisible by 3</td>
+					<td>Proof By Cases where $n=3k+1$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $3k+2$, the $n+1$ term is $3k+3$, which is divisible by 3</td>
+					<td>Proof By Cases where $n=3k+2$</td>
+				</tr>
+			</table>
+			<h4>Proposition 4.3: If n is an integer, $n^9-n$ is divisible by 5 </h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$n$ is an integer</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $5k$, $5k+1$, $5k+2$, $5k+3$, $5k+4$</td>
+					<td>This is true because $5k= 0$ (mod 5)
+						<br /> $5k+1= 1$ (mod 5)
+						<br /> $5k+2= 2$ (mod 5)
+						<br /> ...
+						<br /> $5k+4= 6$ (mod 5)
+						<br /> Another way of saying it is that a remainder of any integer divided by 5 is either going to be 0, 1, 2, ..., 4.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $5k$, the $n$ term is $5k$, which is divisible by 5</td>
+					<td>Proof By Cases where $n=5k$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $5k+1$, the $n-1$ term is $5k$, which is divisible by 5</td>
+					<td>Proof By Cases where $n=5k+1$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $5k+2$, the constant for $n^2+1$ term is $2^2+1=5$, which is divisible by 5</td>
+					<td>Proof By Cases where $n=5k+2$, Theorem 1.1</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $5k+3$, the constant for $n^2+1$ term is $3^2+1=10$, which is divisible by 5</td>
+					<td>Proof By Cases where $n=5k+3$</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $5k+4$, the $n+1$ term is $5k+5$, which is divisible by 5</td>
+					<td>Proof By Cases where $n=5k+4$</td>
+				</tr>
+			</table>
+			<p>Since by Proposition 3.1, 3.2 and 3.3, if n is an integer, $n^9-n$ is divisible by 5, 3 and 2. Therefore, $n^9-n$ is divisible by 30.</p>
+		</div>
+	</div>
+
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

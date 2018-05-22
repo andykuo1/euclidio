@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h2>Basic Properties</h2>
+		<aside>Note: $\sim$ and $*$ are denoted as an operation</aside>
+		<aside>Note: $+$ is denoted as an operation that exhibits associativity</aside>
+		<table class='ei-table ei-fit ei-shadow'>
+			<tr>
+				<th>Properties</th>
+				<th>Definition</th>
+			</tr>
+			<tr>
+				<td>Reflexivity (Irreflexivity means this property does not hold)</td>
+				<td>$x\sim x$ for all $x$</td>
+			</tr>
+			<tr>
+				<td>Symmetry (Asymmetry means this property does not hold)</td>
+				<td>$x\sim y$ and $y\sim x$ for all $x$,$y$</td>
+			</tr>
+			<tr>
+				<td>Transitivity (Atransitivity means this property does not hold)</td>
+				<td>$x\sim y$ and $y\sim z$ therefore $x\sim z$ for all $x$,$y$,$z$</td>
+			</tr>
+			<tr>
+				<td>Anti-reflexivity</td>
+				<td>$x\sim x$ for no $x$</td>
+			</tr>
+			<tr>
+				<td>Anti-Symmetry</td>
+				<td>$x\sim y$ and $y\sim x$ for no $x$,$y$</td>
+			</tr>
+			<tr>
+				<td>Anti-Transitivity</td>
+				<td>$x\sim y$ and $y\sim z$ therefore $x\sim z$ for no $x$,$y$,$z$</td>
+			</tr>
+			<tr>
+				<td>Associativity</td>
+				<td>$\(x_1+x_2+...+x_n\)+\(x_{n+1}+x_{n+2}+...+x_m\)=x_1+x_2+...+x_m$</td>
+			</tr>
+			<tr>
+				<td>Commutativity</td>
+				<td>$x_1+x_2+x_3+...+x_n=x_1+x_3+x_2...+x_n=x_2+x_1+x_3...+x_n=x_2+x_3+x_1...+x_n=...$ (order does not matter)</td>
+			</tr>
+			<tr>
+				<td>Distributivity</td>
+				<td>$x*(y\sim z)=x*y\sim x*z$</td>
+			</tr>
+		</table>
+		<h2>Basic Elements</h2>
+		<table class='ei-table ei-fit ei-shadow'>
+			<tr>
+				<th>Special Elements</th>
+				<th>Definition</th>
+			</tr>
+			<tr>
+				<td>Identity (denoted $0$ in this example)</td>
+				<td>$x\sim 0=x$</td>
+			</tr>
+			<tr>
+				<td>Inverse (denoted $\neg x$ in this example)</td>
+				<td>$x\sim (\neg x)=0$, Assumes Existence of Identity</td>
+			</tr>
+		</table>
+	</div>
+
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

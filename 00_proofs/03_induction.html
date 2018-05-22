@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<article>
+			<h1>Proof By Induction</h1>
+			<p>
+				Proof by induction, is a method of proving that is used to prove various formulas used in geometry. It is a direct proof, which sets the formula up like dominos. It proceeds to knock the first domino into the second, the second into the third, and so
+				on until it knocks all the dominos down.
+			</p>
+		</article>
+
+		<div class='ei-example'>
+			<p>
+				Here, the example we will use is the formula for the sum of positive integers.
+			</p>
+			<div lang='latex'>1+2+3+...+n=\frac{n(n+1)}{2}</div>
+			<p>
+				Now, in order to prove this formula by induction, you will have to determine and prove each of these components: the base case and the inductive step.
+			</p>
+			<p>
+				The base case is going to be the first case in the sequence of cases that will ultimately prove that the formula is indeed correct. In this case, the sum of the first number will be the first case.
+			</p>
+			<div lang='latex'>1=\frac{[1]([1]+1)}{2}=1</div>
+			<p>
+				The inductive step will be to assume the equation to be true for $n=k$. Then to follow with a proof to show that same to be true for $k=n+1$. This is the most powerful step as it will show that if the base case is true, the rest must also be true. For
+				the case of the sum of n numbers, it will proceed to knock each of these statements until it reaches infinity.
+				<br /> If $n=1$ is true (the base case), then $n=2$ must be true
+				<br /> If $n=2$ is true, then $n=3$ is also true
+				<br /> If $n=3$ is true, then $n=4$ is also true
+				<br /> ...
+				<br /> If $n=k$ is true, then $n=k+1$ is also true
+				<br /> We must start with the assumption that $S(n)=\frac{n(n+1)}{2}$ and prove that $S(n+1)=\frac{[n+1]([n+1]+1)}{2}$. That will complete the inductive step. A formal proof of the inductive step is given below.
+			</p>
+
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$S(n)=1+2+...+n=\frac{n(n+1)}{2}$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Suppose for any $k$, $S(k)=\frac{k(k+1)}{2}$</td>
+					<td>Statement 1</td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=1+2+...+k+(k+1)=\frac{k(k+1)}{2}+(k+1)$</td>
+					<td>Statement 1,Definition of Sum</td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[k+2](k+1)}{2}$</td>
+					<td>Factor $\frac{(k+1)}{2}$</td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{(k+1)(k+2)}{2}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[k+1]([k+1]+1)}{2}$</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 1: Prove the following formula for the sum of the first $n$ square numbers: $S(n)=\frac{n(n+1)(2n+1)}{6}$</h3>
+			<h4>Base Case: $n=0$ works</h4>
+			<div lang='latex'>S(0)=\frac{0(0+1)(20+1)}{6}=0</div>
+			<h4>Inductive Step: $n=k+1$ works</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$S(n)=\frac{n(n+1)(2n+1)}{6}$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Suppose for any $k$, $S(k)=\frac{k(k+1)(2k+1)}{6}$</td>
+					<td>Statement 1</td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{k(k+1)(2k+1)}{6}+(k+1)^2$</td>
+					<td>Statement 1,Definition of Sum</td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{k(k+1)(2k+1)}{6}+\frac{6(k+1)(k+1)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[k(2k+1)+6(k+1)](k+1)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[2k^2+k+6k+6](k+1)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[2k^2+7k+6](k+1)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{(2k+3)(k+2)(k+1)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{(k+1)(k+2)(2k+3)}{6}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$S(k+1)=\frac{[k+1]([k+1]+1)(2[k+1]+1)}{6}$</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<hr />
+
+		<div class='ei-example'>
+			<p>
+				Another way to express both of these formulas is to use summation notation. The formula from Example 1 is this
+			</p>
+			<div lang='latex'>\sum_{i=1}^{n} i^{2}=\frac{n(n+1)(2n+1)}{6}</div>
+			<p>
+				The sum starts from replacing each instance of $i$ with $1$ in the equation (which is $1^2$) and continues to increment $i$ by $1$ until it reaches $n$ (which is $n^2$). This generates a sequence ${1^2,2^2,...,n^2}$. The capital sigma symbol says that
+				the numbers in the sequence are to be added together. Multiplying numbers in the sequence uses a capital pi symbol.
+			</p>
+		</div>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 2: Prove the following formula for a generalized geometric series of the form $\color{red}{a,ar,ar^2,...,ar^{n-1}}$<br/>
+					<div lang='latex'>\sum_{i=0}^{n-1} ar^i=a\frac{1-r^n}{1-r}</div>
+				</h3>
+			<h4>Base Case: $n=1$ works</h4>
+			<div lang='latex'>\sum_{i=0}^{1-1} ar^i=a</div>
+			<p>The other side also simplifies to $a$</p>
+			<div lang='latex'>a\frac{1-r^0}{1-r}=a\frac{1-r}{1-r}=a</div>
+			<h4>Inductive Step: $n=k+1$ works</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{n-1} ar^i=a\frac{1-r^n}{1-r}</div>
+					</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Suppose for any $k$,
+						<div lang='latex'>\sum_{i=0}^{k-1} ar^i=a\frac{1-r^k}{1-r}</div>
+					</td>
+					<td>Statement 1</td>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{k} ar^i=a\frac{1-r^k}{1-r}+ar^{k}</div>
+					</td>
+					<td>Statement 1, Definition of Sum</td>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{k} ar^i=\frac{a}{1-r}[(1-r^k)+(1-r)r^{k}]</div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{k} ar^i=\frac{a}{1-r}[(1-r^k)+r^{k}-r^{k+1}]</div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{k} ar^i=\frac{a}{1-r}[1-r^{k+1}]</div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<div lang='latex'>\sum_{i=0}^{k} ar^i=a\frac{1-r^{k+1}}{1-r}</div>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<hr />
+
+		<article>
+			<p>
+				Proof by induction could also prove certain features of geometry. One can also go about proving Euler's Formula by using three inductive proofs: one relates vertices and edges, another relates cycles and vertices, and a final relates cycles and faces.
+			</p>
+		</article>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 3: Prove Euler's Formula for the plane $V-E+F=2$</h3>
+			<h4>Proposition 3.1: For each acyclic (no loops on the graph), connected graph (a path exists from each vertex to every other vertex), $V=E+1$</h4>
+			<h5>Base Case: One Vertex is a connected graph</h5>
+			<p>A graph with one vertex has no vertices. $[1]=[0]+1$</p>
+			<h5>Inductive Step: Adding an edge adds one new vertex and a new edge to a connected graph is still a connected graph</h5>
+
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose an acyclic, connected graph has $k+1$ vertices, then a graph will have $k$ edges </td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Add a new vertex (called N) not on the graph and connect it with any vertex (called P) on the graph. The new graph is still connected </td>
+					<td>Since we are assuming that the old graph has a path that connects P to any vertex, then there is a new path that connects from any vertex to P to N, making this new graph a connected graph. </td>
+				</tr>
+			</table>
+
+			<h4>Proposition 3.2: For each connected graph with $k$ maximum, partitioned cycles and $V$ vertices, $E=V+k-1$ </h4>
+			<h5>Base Case: A graph with no cycles and n vertices</h5>
+			<p>This was already proved in Proposition 3.1 ( $V=E+1$ or $E=V-1$)</p>
+			<h5>Inductive Step: Adding a cycle increases the number of edges by one. </h5>
+
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose a graph has $k$ cycles with $n$ vertices, then a graph will have $1+n+k$ faces </td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Connect two vertices called $P$ and $Q$ that are currently not connected by an edge . This new construction results in a new cycle. </td>
+					<td> What this new edge does is create a new path that allows $P$ to go to itself through $Q$ (and for $Q$ to go through itself through $P$) creating a new cycle. </td>
+				</tr>
+			</table>
+
+			<h4>Proposition 3.3: For each connected graph with $k$ maximum, partitioned cycles, the graph has $k+1$ faces </h4>
+			<h5>Base Case: Zero cycle graph has one face</h5>
+			<p>An acyclic, connected graph has one face since none of the regions close in on itself.</p>
+			<h5>Inductive Step: Adding a new cycle increases the number of faces by $1$</h5>
+
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose a graph has $k$ cycles, then a graph will have $k+1$ faces </td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>Add a new cycle by connecting two vertices that are currently not connected by an edge. The new graph has an extra face. </td>
+					<td> What this new edge does when it is connected by two adjacent vertices is split two regions in half, creating 2 faces from the preexisting face. </td>
+				</tr>
+			</table>
+
+			<h4>Proof</h4>
+			<p>
+				Applying Proposition 3.2 and Proposition 3.3, for a connected graph with $k$ cycles and $n$ vertices.
+				<br /> $F=k+1$
+				<br /> $E=V+k-1$
+				<br /> $E=V+k+1-2$
+				<br /> $E=V+F-2$
+				<br /> $-V+E-F=-2$
+				<br /> $V-E+F=2$
+			</p>
+		</div>
+	</div>
+
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

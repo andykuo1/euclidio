@@ -1,0 +1,32 @@
+.ei-hamburger {
+	display: inline-block;
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	cursor: pointer;
+}
+
+.ei-hamburger-bar-1,
+.ei-hamburger-bar-2,
+.ei-hamburger-bar-3 {
+	width: 30px;
+	height: 3px;
+	margin: 6px 0;
+	background-color: #333;
+	transition: 0.4s;
+	box-shadow: 1px 1px 1px #333;
+}
+
+.ei-hamburger-state .ei-hamburger-bar-1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+	transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.ei-hamburger-state .ei-hamburger-bar-2 {
+	opacity: 0;
+}
+
+.ei-hamburger-state .ei-hamburger-bar-3 {
+	-webkit-transform: rotate(45deg) translate(-6px, -8px);
+	transform: rotate(45deg) translate(-6px, -8px);
+}

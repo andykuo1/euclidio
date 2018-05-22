@@ -1,0 +1,363 @@
+/*
+
+Basic setup for all css
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	font-family: 'Roboto', arial, sans-serif;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+a {
+	color: inherit;
+	background-color: transparent;
+}
+
+hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+
+aside{
+	font-style: italic;
+}
+
+header {
+	margin: 0;
+	padding: 0;
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ************************************************ Button */
+
+.ei-btn {
+	display: inline-block;
+	margin: 0 1.5em;
+	padding: .2em 0;
+	width: 10em;
+	background-color: #d64078;
+	color: white;
+	border-radius: .3em;
+	position: relative;
+	text-decoration: none;
+	border: solid #b03060 1px;
+	border-bottom: solid #b03060 4px;
+	text-shadow: 0px 2px 0 #b03060;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.ei-btn:hover {
+	background-color: #BF3065
+}
+
+.ei-btn:active {
+	background-color: #BF3065;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+
+/* ************************************************ Aperature Button */
+
+.ei-aperature
+{
+	display: block;
+	width: 100%;
+	margin: 5px 0;
+	box-sizing: border-box;
+	clear: both;
+	background-color: #ededed;
+	text-decoration: none;
+}
+
+.ei-aperature-content
+{
+	width: 100%;
+	height: 100%;
+	padding: 20px 30px 20px 30px;
+	background-color: #ededed;
+  shape-inside: polygon(0 0,  40% 0, 60% 50%, 40% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0,  40% 0, 60% 50%, 40% 100%, 0 100%);
+  transition: all 1s ease;
+}
+
+.ei-aperature:hover > .ei-aperature-content
+{
+	background-color: #777777;
+  shape-inside: polygon(0 0,  100% 0, 100% 50%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0,  100% 0, 100% 50%, 100% 100%, 0 100%);
+}
+
+.ei-aperature:hover > .ei-aperature-content h3
+{
+	margin: 0 30px;
+	color: #ffffff;
+}
+
+.ei-aperature:hover > .ei-aperature-content img
+{
+	margin: -100px 50vw;
+}
+
+.ei-aperature-content img
+{
+	height: 100%;
+	position: absolute;
+	display: block;
+	float: right;
+	margin: 100px 50vw;
+	transition: all 1s ease;
+}
+
+.ei-aperature-content h3
+{
+	font-size: 18px;
+	color: #000000;
+	margin: 0 0;
+	transition: margin 0.5s ease, color 0.1s ease;
+}
+
+
+/* ************************************************ Example */
+
+.ei-example {
+	display: block;
+	margin: 10px;
+	padding: 20px;
+	border: 2px dashed #dddddd;
+}
+
+.ei-example h3 {
+	color: rgb(175, 16, 32)
+}
+
+
+/* ************************************************ Table */
+
+.ei-table {
+	display: table;
+	border-collapse: collapse;
+}
+
+.ei-table th {
+	color: white;
+	background-color: #83BACC;
+}
+
+.ei-table td {
+	padding: 5px;
+}
+
+
+/* ************************************************ Panel */
+
+.ei-panel {
+	display: block;
+	margin: 10px;
+	padding: 20px;
+	background-color: #dde4e9;
+	border-style: solid;
+	border-width: 1px 10px 10px 1px;
+	border-color: #558abb;
+	clear: both;
+}
+
+.ei-panel h2 {
+	color: rgb(16, 112, 169)
+}
+
+/* ************************************************ ClearBlock */
+
+.ei-clearblock,
+.ei-clearblock-parallax {
+	position: relative;
+	height: 100%;
+	clear: both;
+	background-attachment: scroll;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.ei-clearblock-parallax {
+	background-attachment: fixed;
+}
+
+@media only screen and (max-device-width: 1024px) {
+	.ei-clearblock-parallax {
+		background-attachment: scroll;
+	}
+}
+
+/* ************************************************ Attributes */
+
+.ei-wide {
+	margin: 40px;
+	padding: 40px;
+}
+
+.ei-fit {
+	margin: 20px;
+	padding: 20px;
+}
+
+.ei-compact {
+	margin: 10px;
+	padding: 10px;
+}
+
+.ei-border-thin {
+	border-style: solid;
+	border-width: 1px !important;
+}
+
+.ei-border-thick {
+	border-style: solid;
+	border-width: 4px !important;
+}
+
+.ei-shadow {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 12px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.ei-left {
+	float: left !important;
+}
+
+.ei-right {
+	float: right !important;
+}
+
+.ei-center {
+	text-align: center;
+}
+
+.ei-plain {
+	color: #000000 !important;
+	background-color: #FFFFFF !important;
+}
+
+.ei-light {
+	color: #000000 !important;
+	background-color: #f6f6f6 !important;
+}
+
+.ei-dark {
+	color: #FFFFFF !important;
+	background-color: #4c4c4c !important;
+}
+
+.ei-theme {
+	color: #FFFFFF !important;
+	background-color: #83BACC !important;
+}
+
+.ei-divider-top {
+	border-top-style: dashed;
+	border-width: 6px;
+	border-color: #4c4c4c;
+}
+
+.ei-divider-bottom {
+	border-bottom-style: dashed;
+	border-width: 10px;
+	border-color: #4c4c4c;
+}
+
+.ei-active {
+	color: #000000 !important;
+	background-color: #ffffff !important;
+}
+
+.ei-fadein {
+	/* Safari, Chrome and Opera > 12.1 */
+	-webkit-animation: fadein 2s;
+	/* Firefox < 16 */
+	-moz-animation: fadein 2s;
+	/* Internet Explorer */
+	-ms-animation: fadein 2s;
+	/* Opera < 12.1 */
+	-o-animation: fadein 2s;
+	/* Other */
+	animation: fadein 2s;
+}
+
+.ei-fadein-fast {
+	/* Safari, Chrome and Opera > 12.1 */
+	-webkit-animation: fadein 0.3s;
+	/* Firefox < 16 */
+	-moz-animation: fadein 0.3s;
+	/* Internet Explorer */
+	-ms-animation: fadein 0.3s;
+	/* Opera < 12.1 */
+	-o-animation: fadein 0.3s;
+	/* Other */
+	animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h1>Proof By Contrapositive</h1>
+		<article>
+			<p>
+				A proof by contraposition is a form of indirect proof that begins with the assumption that the conclusion is false. It then proceeds to arrive at the hypothesis being false. If you are trying to prove $P\rightarrow Q$ (if $P$, then $Q$), you start with
+				$\lnot Q$ (not $Q$) and arrive at a new conclusion, which is the hypothesis being false $\lnotP$ (not $P$), the contrapositive. Please do not confuse this with <a href='03_contradiction.html'>Proof by Contradiction</a>.
+			</p>
+		</article>
+
+		<div class='ei-panel'>
+			<h2>Difference Between Contrapositive vs Contradiction</h2>
+			<p>
+				The difference between these two methods are subtle. Visualize it like this:
+				<br /> 1. Contradiction : Assume $P$ and NOT $Q$. Then prove a new statement which is known to be false ($R$ and NOT $R$)
+				<br /> 2. Contrapositive : Assume NOT $Q$. Then prove NOT $P$
+			</p>
+		</div>
+
+		<div class='ei-panel'>
+			<h2>When to use Direct Proof vs When to use Contrapositive Proof</h2>
+			<p>
+				Use a Direct Proof when the hypothesis is more simple. Use an Indirect Proof when the conclusion is more simple.
+				<br />
+			</p>
+			<hr />
+			<p>
+				When proving biconditionals, statements where it is necessary to prove if $P$, then $Q$ AND if $Q$, then $P$, it is convenient to use a direct proof to prove it in one direction and an proof by contrapositive to show that it works in the other direction.
+			</p>
+		</div>
+		<div class='ei-example'>
+			<h3>Ex. 1: Suppose that $x\in \mathbb{Z}$ ($x$ is an element of the integers). Prove that if $x^2-6x+5$ is even, then $x$ is odd.</h3>
+			<p>As you can see, it is more difficult to start with the hypothesis. Starting with the negation of the conclusion is much easier.</p>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $x$ is even, then $x$ can be written in the form $2n$ where $n$ is an integer</td>
+					<td>Given, Definition of an Even Number</td>
+				</tr>
+				<tr>
+					<td>$x^2-6x+5=4n^2-6(2n)+5=4n^2-12n+5=2(2n^2-6n+2)+1$ is odd</td>
+					<td>Proof by Contrapositive</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class='ei-example'>
+			<h3>Ex. 2: Suppose that $x,y\in \mathbb{R}$ ($x$ and $y$ is an element of the real numbers). Prove that if $y^3+yx^2\leq x^3+xy^2$, then $y\leq x$.</h3>
+			<div lang='latex'>y^3+yx^2\leq x^3+xy^2</div>
+			<div lang='latex'>y(y^2+x^2)\leq x(x^2+y^2)</div>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose it is not true that $y\leq x$, then $y&gt;x$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>$x^2+y^2\geq 0$</td>
+					<td>Signed Multiplication Rule Corollary ($xx=x^2\geq 0 for x\in \mathbb{R}$)</td>
+				</tr>
+				<tr>
+					<td>$y(y^2+x^2)&gt;x(x^2+y^2)$ or $y^3+yx^2&gt;x^3+xy^2$</td>
+					<td>Proof by Contrapositive</td>
+				</tr>
+			</table>
+			<p>Note: Corollary is related theorem which follows from a proven theorem (Requires few to one step to prove)</p>
+		</div>
+
+		<div class='ei-example'>
+			<h3>Ex. 3: Prove that if n is a positive integer such that n mod 4 is 2 or 3, then n is NOT a perfect square.</h3>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose  $0=k$ (mod 4), then $k=4q$ for some integer $q$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>$n = k^2 = 16 q^2 = 4(4 q^2)$. Let $k=4q$ for some integer $q$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Every number $n$ can be written in the form, $2k$, $2k+1$</td>
+					<td>This is true because $2k= 0$ (mod 2)
+						<br /> $2k+1= 1$ (mod 2)
+						<br /> Another way of saying it is that a remainder of any integer divided by 2 is either going to be 0, 1.
+					</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $2k$, the $n$ term is $2k$, which is divisible by 2</td>
+					<td>Proof By Cases where $n=2k$, Proof by Contrapositive</td>
+				</tr>
+				<tr>
+					<td>Suppose $n$ is of the form $2k+1$, the $n-1$ term is $2k$, which is divisible by 2</td>
+					<td>Proof By Cases where $n=2k+1$, Proof by Contrapositive</td>
+				</tr>
+			</table>
+		</div>
+		<div class='ei-panel'>
+			<h2>Test for Eliminating Perfect Square Possibilities</h2>
+			<p>
+				If $n$ is a positive integer such that $n$ (mod 4) is 2 or 3, then $n$ is NOT a perfect square.
+			</p>
+		</div>
+	</div>
+
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<article>
+			<h1>Proof By Contradiction</h1>
+			<p>
+				A proof by contradiction is a form of indirect proof that begins with the assumption that the hypothesis is true and the conclusion is false. It then proceeds to arrive at a contradiction. If you are trying to prove $P \rightarrow Q$ (if $P$, then $Q$),
+				you start with $P \land \lnot Q$ ($P$ and not $Q$) and arrive at a new conclusion $R \land \lnot R$ ( $R$ and not $R$), a contradiction. Please do not confuse this with <a href='04_contrapositive.html'>Proof by Contraposition</a>. The most well
+				known proof that uses this is the proof that $\sqrt{2}$ is irrational. The proof will be presented in Example 2.
+			</p>
+		</article>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 1: Prove that there is no smallest positive non-zero number.</h3>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose there exist $a>0$ which is the smallest number possible</td>
+					<td>Proof by Contradiction, Definition of a rational number</td>
+				</tr>
+				<tr>
+					<td>There exist a smaller number $\frac{a}{10}$ such that $a>\frac{a}{10}>0$ which is an even smaller number</td>
+					<td>Contradiction to Statement 1</td>
+				</tr>
+			</table>
+			<p>We arrived at a contradiction! That completes the proof.</p>
+		</div>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 2: Prove that $\sqrt{2}$ is irrational.</h3>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $\sqrt{2}=\frac{p}{q}$ where $p$ and $q$ are relatively prime (have no common prime factors)</td>
+					<td>Proof by Contradiction, Definition of a rational number</td>
+				</tr>
+				<tr>
+					<td>$2=\frac{p^2}{q^2}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$2q^2=p^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$p$ must be even</td>
+					<td>Statement 3, Statement 1</td>
+				</tr>
+				<tr>
+					<td>There exist an integer $k$ such that $p=2k$</td>
+					<td>Definition of an Even Number</td>
+				</tr>
+				<tr>
+					<td>$2q^2=4k^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q^2=2k^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q$ must be even</td>
+					<td>Contradiction to Statement 4</td>
+				</tr>
+			</table>
+		</div>
+
+		<hr />
+
+		<div class='ei-example'>
+			<h3>Ex. 3: Prove that $^{m}\sqrt{n}$ is irrational if and only if there is no integer value $k$ such that $k^m=n$ or $\nexists k\in \mattbb{Z} | k^m=n$ ( $n$ is not a perfect $m$th power).</h3>
+			<h4>Proposition 3.1: $\sqrt{n}$ is irrational if and only if $n$ is a square number (Euclid's Lemma)</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $\sqrt{n}=\frac{p}{q}$ where $p$ and $q$ are relatively prime (have no common prime factors)</td>
+					<td>Proof by Contradiction, Definition of a rational number</td>
+				</tr>
+				<tr>
+					<td>$n=\frac{p^2}{q^2}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$nq^2=p^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$p$ must be divisible by $n$</td>
+					<td>Statement 3, Statement 1</td>
+				</tr>
+				<tr>
+					<td>There exist an integer $i$ such that $p=nk$</td>
+					<td>Definition of Divisibility</td>
+				</tr>
+				<tr>
+					<td>$nq^2=n^2k^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q^2=nk^2$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q$ must be divisible by $n$</td>
+					<td>Contradiction to Statement 4</td>
+				</tr>
+			</table>
+			<h4>Generalized, Complete Proof</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $^j\sqrt{n}=\frac{p}{q}$ where $p$ and $q$ are relatively prime (have no common prime factors)</td>
+					<td>Proof by Contradiction, Definition of a rational number</td>
+				</tr>
+				<tr>
+					<td>$n=\frac{p^j}{q^j}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$nq^j=p^j$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$p$ must be divisible by $n$</td>
+					<td>Statement 3, Statement 1</td>
+				</tr>
+				<tr>
+					<td>There exist an integer $i$ such that $p=nk$</td>
+					<td>Definition of Divisibility</td>
+				</tr>
+				<tr>
+					<td>$nq^j=n^jk^j$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q^j=n^{j-1}k^j$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>$q$ must be divisible by $n$</td>
+					<td>Contradiction to Statement 4</td>
+				</tr>
+			</table>
+			Note: This proof can be extended to real and complex values!
+		</div>
+	</div>
+
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eihamburger.css' />
+	<script type='text/javascript' src='../lib/ei/eihamburger.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><div class='ei-hamburger' onclick='toggleSideBar(this)'></div></li>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h1>Rays and Line Segments</h1>
+		<article>
+			<p>Now we will be partitioning a line much like how we partition into intervals. An interval with one side extending indefinitely corresponds to a ray. An interval with both sides bounded corresponds to a line segment.
+			</p>
+			<p>We will start with rays and then move on to line segments.</p>
+		</article>
+		<div class='ei-panel'>
+			<h2>Ray and Opposite Ray</h2>
+			<p>
+				For any point, $P$, on a line $l$, the points can be divided into a ray (call it $r$) and its opposite (denoted $r^{op}$).
+			</p>
+		</div>
+		<p>The converse, which is that a ray and its opposite also form a line, can be proven.</p>
+		<div class='ei-example'>
+			<h3>Corollary 2.1: Union of a ray and its opposite</h3>
+			<h4>The union of a ray and its opposite is a line.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose a ray $\overrightarrow{BC}$ and its opposite $\overrightarrow{BA}$ form two distinct lines, $l_1$ and $l_2$ </td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>A point, $B$, divides a line, $l$ to a ray, $\overrightarrow{BA}$, and its opposite, $\overrightarrow{BC}$</td>
+					<td>Definition of a Ray and its Opposite</td>
+				</tr>
+				<tr>
+					<td>$A$, $B$, $C$ are collinear</td>
+					<td>Statement 2</td>
+				</tr>
+				<tr>
+					<td>$\overleftrightarrow{AB}$ (or $l_1$) and $\overleftrightarrow{BC}$ (or $l_2$) are the same line</td>
+					<td>Definition of Collinearity, Proof by Contradiction</td>
+				</tr>
+				</table>
+		</div>
+		<div class='ei-panel'>
+			<h2>Line Segment</h2>
+			<p>
+				For any two points, $A$ and $B$, the line segment is the set of points, $P$, where $\overleftrightarrow{APB}$.
+			</p>
+		</div>
+		<article>
+			<p>
+				The line segment could be thought of as an infinite number of points lined up to form a line with $A$ and $B$ forming the two boundaries. It could also be thought of as a closed interval on a number line.
+			</p>
+		</article>
+		
+		<div class='ei-panel'>
+			<h2>Axiom of Congruence</h2>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Axiom</th>
+					<th>Illustration</th>
+				</tr>
+				<tr>
+					<td>I. If $A$ and $B$ are distinct points and if $A'$ is any point, then for each ray, $r$, radiating from $A'$ there is a unique point, $B'$, such that $\overline{AB}\cong \overline{A'B'}$ (Segment Construction Axiom)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>II. If $\overline{AB}\cong \overline{CD}$ and $\overline{AB}\cong \overline{EF}$, then $\overline{CD}\cong \overline{EF}$ (Transitivity of Segment Congruence)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>III. If $A$, $B$, $C$ are collinear and $A'$, $B'$, $C'$ are also collinear and $\overline{AB}\cong \overline{A'B'}$ and $\overline{BC}\cong \overline{B'C'}$, then $\overline{AC}\cong \overline{A'C'}$ (Segment Addition Axiom)</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<p>One very useful case of the segment construction axiom is given by this corollary</p>
+		<div class='ei-panel'>
+			<h2>Corollary 2.2: Congruence of Line Segments with the Same Endpoints</h2>
+			<p>For any points $A$ and $B$ on a ray, $r$, $\overline{AB}\cong \overline{AB}$.</p>
+			<aside>This is one of the limiting cases of the segment construction axiom where $A'$ is $A$ and the ray, $r$, is on the line, $\overleftrightarrow{AB}$</aside>
+		</div>
+		<p>The relationship between rays and line segments is drawn from this corollary</p>
+		<div class='ei-example'>
+			<h3>Corollary 2.3: Intersection of a ray, $\overrightarrow{AB}$ and $\overrightarrow{BA}$</h3>
+			<h4>Intersection of a ray, $\overrightarrow{AB}$ and $\overrightarrow{BA}$ is the line segment, $\overline{AB}$.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose there is a set of collinear points, $P$, that bound the ray at endpoints, $\overrightarrow{AB}$</td>
+					<td>Given, Definition of Line Segment</td>
+				</tr>
+				<tr>
+					<td>Suppose there is another set of collinear points, $Q$, that bound the ray at endpoints, $\overrightarrow{BA}$</td>
+					<td>Given, Definition of Line Segment</td>
+				</tr>
+				<tr>
+					<td>The two set of collinear points, $P$ and $Q$, are equivalent</td>
+					<td>Congruence of Line Segments with the Same Endpoints</td>
+				</tr>
+				</table>
+		</div>
+		<p>A very important property of congruence is illustrated in the following theorem</p>
+		<div class='ei-example'>
+			<h3>Theorem 2.4: Congruence Preserves Order</h3>
+			<p>If $\overline{A_1A_2A_3...A_n}$ and $B_1$, $B_2$, $B_3$..., $B_n$ exist such that $\overline{A_1A_2}\cong \overline{B_1B_2}$ and $\overline{A_2A_3}\cong \overline{B_2B_3}$ and ... and $\overline{A_{n-1}A_{n}}\cong \overline{B_{n-1}B_{n}}$, then $\overline{B_1B_2B_3...B_n}$</p>
+			<aside>A proof by induction to prove any number of line segments maintains order when it is congruent to another set of line segments followed by a proof by contradiction to show the inductive step to be true completes the proof. More specifically, in the proof by contradiction, we show that if the ordering of the point is anywhere other than the first or last position, it results in a contradiction. Note that if we chose to add the points from last to first or from first to last, the proof is still the same.</aside>
+			<h4>Base Case: If $\overline{A_1A_2}$ and $B_1$ and $B_2$ exist such that $\overline{A_1A_2}\cong \overline{B_1B_2}$, then $\overline{B_1B_2}$</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$\overline{A_1A_2}$ and $B_1$ and $B_2$ exist such that $\overline{A_1A_2}\cong \overline{B_1B_2}$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>$\overline{B_1B_2}$</td>
+					<td>Statement 1</td>
+				</tr>
+			</table>
+			<h4>Inductive Step: Suppose, $\overline{A_1...A_kA_{k+1}}$ and $B_k$ and $B_{k+1}$ exist such that $\overline{A_kA_{k+1}}\cong \overline{B_kB_{k+1}}$, then $\overline{B_1B_2...B_kB_{k+1}}$. It is also true that $\overline{A_{k+1}A_{k+2}}$ and $B_{k+1}$ and $B_{k+2}$ exist such that $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$, then $\overline{B_1B_2...B_{k+1}B_{k+2}}$.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>$\overline{A_kA_{k+1}}$ and $B_k$ and $B_{k+1}$ exist such that $\overline{A_kA_{k+1}}\cong \overline{B_kB_{k+1}}$, then $\overline{B_1B_2...B_kB_{k+1}}$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_{k+1}A_{k+2}}$ and $B_{k+1}$ and $B_{k+2}$ exist such that $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Given</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_{k}A_{k+2}}\cong \overline{B_{k}B_{k+2}}$ because $\overline{A_{k}A_{k+1}}\cong \overline{B_{k}B_{k+1}}$ and $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_{k-1}A_{k+2}}\cong \overline{B_{k-1}B_{k+2}}$ because $\overline{A_{k-1}A_{k+1}}\cong \overline{B_{k-1}B_{k+1}}$ and $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Statement 3, Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_{k-2}A_{k+2}}\cong \overline{B_{k-2}B_{k+2}}$ because $\overline{A_{k-2}A_{k+1}}\cong \overline{B_{k-2}B_{k+1}}$ and $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Statement 3 and 4, Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_{k-3}A_{k+2}}\cong \overline{B_{k-3}B_{k+2}}$ because $\overline{A_{k-3}A_{k+1}}\cong \overline{B_{k-3}B_{k+1}}$ and $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Statement 3 and 4 and 5, Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>...</td>
+					<td>Statement 3 and 4 and 5 and ..., Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>$\overline{A_1A_{k+2}}\cong \overline{B_1B_{k+2}}$ because $\overline{A_1A_{k+1}}\cong \overline{B_1B_{k+1}}$ and $\overline{A_{k+1}A_{k+2}}\cong \overline{B_{k+1}B_{k+2}}$</td>
+					<td>Statement 3 and 4 and 5 and ... and $k+2$, Segment Construction Axiom</td>
+				</tr>
+				<tr>
+					<td>Suppose $\overline{B_1...B_{j-1}B_{k+2}B_j...B_{k+1}}$, then $\overline{B_1...B_{j-1}B_{k+2}B_j}\cong \overline{A_1...A_{j-1}A_{k+2}A_j}$ but $\overline{A_1...A_{j-1}A_j...A_{k+1}}$</td>
+					<td>Statement 3 and 4 and 5 and ... and $k+2$, Segment Construction Axiom, Proof by Contradiction 
+					<br />
+					<aside>Since the ordering of all the points in A is determined, changing the ordering of B would result in a proof by contradiction because it results in a different ordering of A due to all of the congruent segments we proved prior to this statement</aside>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class='ei-panel'>
+			<h2>Theorem 2.4: Congruence Preserves Order</h2>
+			<p>If $\overline{A_1A_2A_3...A_n}$ and $B_1$, $B_2$, $B_3$..., $B_n$ exist such that $\overline{A_1A_2}\cong \overline{B_1B_2}$ and $\overline{A_2A_3}\cong \overline{B_2B_3}$ and ... and $\overline{A_{n-1}A_{n}}\cong \overline{B_{n-1}B_{n}}$, then $\overline{B_1B_2B_3...B_n}$</p>
+		</div>
+		
+		
+	</div>
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

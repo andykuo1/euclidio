@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eihamburger.css' />
+	<script type='text/javascript' src='../lib/ei/eihamburger.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><div class='ei-hamburger' onclick='toggleSideBar(this)'></div></li>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h1>Simple Direct Proofs</h1>
+		<article>
+			<p>
+				A direct proof starts with the hypothesis and traverses through logical steps in order to reach the conclusion. The following simple examples will illustrate the direct proof. It will also reveal some basic facts about number theory that will be useful
+				in other examples which illustrate more complicated techniques used in direct proofs. Like geometry, understanding the foundation of number theory will lead to understanding of more complicated problems.
+			</p>
+			<p>
+				When following proofs, they will be in the form of a table. It will be assumed that each statement except the first uses the previous statement unless stated otherwise. That way, the proof will have a logical flow. In more complicated proofs however,
+				many different branches may need to be proven. When that is the case, we will create a table for each proposition. These propositions are developed such that they eventually prove the theorem. Complicated proofs will not show up in this section so
+				there will be no propositions here. In the next few sections, however, there will be propositions.
+			</p>
+			<p>
+				Another note to mention is that it is assumed that you know about the basic Postulates of Equality. A reference table will be given in the <a href='resources.html'>resources page</a> for this chapter. In addition, all of these property will be used
+				in combination for the sake of brevity unless not knowing the property used will make the proof difficult to read.
+			</p>
+		</article>
+		<div class='ei-example'>
+			<h3>Ex. 1 Prove that two integers, $a$ and $b$, are an even and an odd number if and only if $a+b$ is odd. </h3>
+			<p>While if $P$ then $Q$ are called conditionals, $P$ if and only if $Q$ are called biconditionals. To prove a biconditional, prove if $P$ then $Q$. Then prove if $Q$ then $P$.</p>
+			<h4>Part a: Prove that if two integers, $a$ and $b$, are an even and an odd number, then $a+b$ is odd.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a$ is designated as the even number and $b$ is designated as the odd number, then $a$ can be written in the form, $2m$, where $m$ is an integer and $b$ can be written in the form, $2n+1$, where $n$ is an integer</td>
+					<td>Given, Definition of an Odd Number and Definition of an Even Number</td>
+				</tr>
+				<tr>
+					<td>$a+b=2m+2n+1=2(m+n)+1$ is odd</td>
+					<td></td>
+				</tr>
+			</table>
+			<h4>Part b: Prove that if two integers, $a$ and $b$, are numbers such that $a+b$ is odd, then one number is even and another number is odd.</h4>
+			<p>
+				For a problem like this, it might be easier to use an Axiom for integers. (Although this property, known as closure, can be proven, it is not in the scope of this subject and hence will be assumed to be true).
+			</p>
+			<div class='ei-panel'>
+				<h2>Axiom (Closure of Addition for Integers)</h2>
+				<p>
+					For a given integer, $c$, there is always another two integers, $a$ and $b$, such that $a+b=c$
+				</p>
+			</div>
+			<p>
+				Now if one realizes that one of these numbers $b$ can be expressed as $c-a$, one can use this Axiom for this problem.
+			</p>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a+b$ is an odd number, then $a+b=2n+1$ where n is an integer</td>
+					<td>Given, Definition of an Odd Number</td>
+				</tr>
+				<tr>
+					<td>Suppose $m$ is a number such that $a+m=n$, then $a+b=2(a+m)+1$</td>
+					<td>Closure of Addition</td>
+				</tr>
+				<tr>
+					<td>$b=(a+2m)+1$ or $b=(a+1)+2m$</td>
+					<td>If $a$ is indeed even, then $a+2m$ must also surely be even so $b$ must be odd.
+						<br /> If $a$ is indeed odd, then $a+1$ must surely be even making $b$ even.</td>
+				</tr>
+			</table>
+		</div>
+		<div class='ei-example'>
+			<h3>Ex. 2 Prove that two integers, $a$ and $b$, are both either even or odd integers if and only if $a+b$ is even. </h3>
+			<p>This problem requires a division into cases where for the first case, $a$ and $b$ are even, and for the second case, where $a$ and $b$ are odd. Proof by Cases extends upon that idea and applies it for many cases.</p>
+			<h4>Part a: Prove that if two integers, $a$ and $b$, are both even numbers, then $a+b$ is even.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a$ and $b$ are even numbers, then $a$ can be written in the form, $2m$, where $m$ is an integer and $b$ can be written in the form, $2n$, where $n$ is an integer</td>
+					<td>Given, Definition of an Even Number</td>
+				</tr>
+				<tr>
+					<td>$a+b=2m+2n=2(m+n)$ is even</td>
+					<td></td>
+				</tr>
+			</table>
+			<h4>Part b: Prove that if two integers, $a$ and $b$, are both odd numbers, then $a+b$ is even.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a$ and $b$ are odd numbers, then $a$ can be written in the form, $2m+1$, where $m$ is an integer and $b$ can be written in the form, $2n+1$, where $n$ is an integer</td>
+					<td>Given, Definition of an Odd Number</td>
+				</tr>
+				<tr>
+					<td>$a+b=2m+1+2n+1=2m+2n+2=2(m+n+1)$ is even</td>
+					<td></td>
+				</tr>
+			</table>
+			<h4>Part c: Prove that if two integers, $a$ and $b$, are numbers such that $a+b$ is odd, then both numbers are either even or both odd.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a+b$ is an even number, then $a+b=2n$ where n is an integer</td>
+					<td>Given, Definition of an Odd Number</td>
+				</tr>
+				<tr>
+					<td>Suppose $m$ is a number such that $a+m=n$, then $a+b=2(a+m)$</td>
+					<td>Closure of Addition</td>
+				</tr>
+				<tr>
+					<td>$b=(a+2m)$</td>
+					<td>If $a$ is indeed even, then $a+2m$ must also surely be even so $b$ must be even.
+						<br /> If $a$ is indeed odd, then $a+2m$ must surely be odd making $b$ odd.</td>
+				</tr>
+			</table>
+		</div>
+		<p>Both of these examples illustrate this common overarching idea (also called a theorem)</p>
+		<div class='ei-panel'>
+			<h2>Parity of Addition</h2>
+			<p>
+				For three given integers, $a$, $b$, $c$ where $a+b=c$, two conditions exist:
+				<br /> 1.$a$ and $b$ is odd and even where $a+b$ is odd
+				<br /> 2.$a$ and $b$ are either both odd or even where $a+b$ is even
+				<br />
+			</p>
+			<p>This rule includes subtraction where b is negative</p>
+		</div>
+		<p>Using a similar axiom for multiplication, one can also prove a similar and intuitive theorem.</p>
+		<div class='ei-panel'>
+			<h2>Axiom (Closure of Multiplication in the Integers)</h2>
+			<p>
+				For a given integer, $c$, there is always another two integers, $a$ and $b$, such that $ab=c$
+			</p>
+		</div>
+		<div class='ei-panel'>
+			<h2>Parity of Multiplication</h2>
+			<p>
+				For three given integers, $a$, $b$, $c$ where $ab=c$, two conditions exist:
+				<br /> 1.One number, $a$ or $b$ (could be both $a$ and $b$), is even where $ab$ is even
+				<br /> 2.Both numbers, $a$ and $b$ are odd where $ab$ is odd
+				<br />
+			</p>
+			<p>This rule includes subtraction where b is negative</p>
+		</div>
+		<hr />
+		<p>One can also, instead of using even and odd integers, test the same with positive and negative numbers.</p>
+		<div class='ei-example'>
+			<h3>Ex. 3 Prove that two real numbers, $a$ and $b$, have opposite signs if and only if $ab$ is positive. </h3>
+			<h4>Part a: Prove that if two real numbers, $a$ and $b$, have opposite signs, then $ab$ is positive.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $a$ is designated as the positive real number and $b$ is designated as the negative real numbers, then $a>0$ and $b>0$</td>
+					<td>Given, Definition of a Positive Number and Definition of a Negative Number</td>
+				</tr>
+				<tr>
+					<td>$b&lt;0$ or $-b&gt;0$</td>
+					<td>Additive Inverse Postulate of Inequality</td>
+				</tr>
+				<tr>
+					<td>$a&gt;0$ and $-b&gt;0$ so $a(-b)&gt;0$</td>
+					<td>Multiplication Postulate of Inequality</td>
+				</tr>
+				<tr>
+					<td>$a(-b)>0$ so $ab&lt;0$</td>
+							<td>Additive Inverse Postulate of Inequality</td>
+				</tr>
+			</table>
+			<h4>Part b: Prove that if two real numbers, $a$ and $b$, are numbers such that $ab$ is negative, then both numbers have opposite sign.</h4>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Statement</th>
+					<th>Proof</th>
+				</tr>
+				<tr>
+					<td>Suppose $ab&lt;0$, where $a$ and $b$ are real numbers</td>
+							<td>Given, Definition of a Negative Number</td>
+				</tr>
+				<tr>
+					<td>Suppose $c$ and $d$ are positive real numbers of $a$ and $b$ such that $cd=\left|{ab}\right|$</td>
+					<td>Property that $\left|{ab}\right|=\left|{a}\right|\left|{b}\right|$ (Proven in <a href='01_exhaustion.html'>Proof by Case</a>, Ex. 1)</td>
+				</tr>
+				<tr>
+					<td>$cd>0$</td>
+					<td>Definition of Absolute Value</td>
+				</tr>
+				<tr>
+					<td>$-cd&lt;0$</td>
+							<td>Additive Inverse Postulate of Inequality</td>
+				</tr>
+				<tr>
+					<td>$ab=(-c)d=c(-d)$</td>
+					<td>If $a$ is indeed positive, then $ab=c(-d)$ must also surely be positive so $b$ must be positive.
+						<br /> If $a$ is indeed negative, then $ab=(-c)d$ must surely be negative making $b$ negative.</td>
+				</tr>
+			</table>
+		</div>
+		<div class='ei-example'>
+			<h3>Ex. 4 Prove that two real numbers, $a$ and $b$, have the same sign if and only if $ab$ is positive. </h3>
+			<p>This problem requires a division into cases where for the first case, $a$ and $b$ are positive, and for the second case, where $a$ and $b$ are negative.
+				<h4>Part a: Prove that if two real numbers, $a$ and $b$, are both positive, then $ab$ is positive.</h4>
+				<table class='ei-table ei-fit ei-shadow'>
+					<tr>
+						<th>Statement</th>
+						<th>Proof</th>
+					</tr>
+					<tr>
+						<td>Suppose $a$ and $b$ are positive real numbers, then $a&gt;0$ and $b&gt;0$</td>
+						<td>Given, Definition of a Positive Number</td>
+					</tr>
+					<tr>
+						<td>$a>0$ and $b>0$ so $ab>0$</td>
+						<td>Multiplication Postulate of Inequality</td>
+					</tr>
+				</table>
+				<h4>Part b: Prove that if two real numbers, $a$ and $b$, are both negative numbers, then $ab$ is negative.</h4>
+				<table class='ei-table ei-fit ei-shadow'>
+					<tr>
+						<th>Statement</th>
+						<th>Proof</th>
+					</tr>
+					<tr>
+						<td>Suppose $a$ and $b$ are negative numbers, then there exist positive numbers $c$ and $d$ such that $c=-a$ and $d=-b$</td>
+						<td>Given, Additive Inverse Property</td>
+					</tr>
+					<tr>
+						<td>$c&gt;0$ and $d&gt;0$ so $cd&gt;0$</td>
+						<td>Multiplication Postulate of Inequality</td>
+					</tr>
+					<tr>
+						<td>$ab=(-c)(-d)=cd$ therefore $ab&gt;0$</td>
+						<td></td>
+					</tr>
+				</table>
+				<h4>Part c: Prove that if two real numbers, $a$ and $b$, are numbers such that $ab$ is positive, then both numbers are either both positive or both negative.</h4>
+				<table class='ei-table ei-fit ei-shadow'>
+					<tr>
+						<th>Statement</th>
+						<th>Proof</th>
+					</tr>
+					<tr>
+						<td>Suppose $ab&gt;0$, where $a$ and $b$ are real numbers</td>
+						<td>Given, Definition of an Odd Number</td>
+					</tr>
+					<tr>
+						<td>Suppose $c$ and $d$ are positive real numbers of $a$ and $b$ such that $cd=\left|{ab}\right|$</td>
+						<td>Property that $\left|{ab}\right|=\left|{a}\right|\left|{b}\right|$ (Proven in <a href='01_exhaustion.html'>Proof by Case</a>, Ex. 1)</td>
+					</tr>
+					<tr>
+						<td>$cd&gt;0$</td>
+						<td>Definition of Absolute Value</td>
+					</tr>
+					<tr>
+						<td>$cd=ab=(-a)(-b)$</td>
+						<td>If $a$ is indeed positive, then $cd=ab$ must also surely be positive so $b$ must be positive.
+							<br /> If $a$ is indeed negative, then $cd=(-a)(-b)$ must surely be negative making $b$ negative.</td>
+					</tr>
+				</table>
+		</div>
+
+		<p>The results can be shown in this following theorem</p>
+		<div class='ei-panel'>
+			<h2>Signed Multiplication Rule</h2>
+			<p>
+				For two given real numbers, $a$, $b$, two conditions exist:
+				<br /> 1.$a$ and $b$ are the same sign if and only if $ab&gt;0$
+				<br /> 2.$a$ and $b$ have opposite signs if and only if $ab&lt;0$ </p>
+		</div>
+	</div>
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' lang='en' />
+	<link rel='stylesheet' type='text/css' href='../lib/ei/ei.css' />
+	<script type='text/javascript' src='../lib/util.js'></script>
+	<script type='text/javascript' src='../lib/latexit.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eibodynav.css' />
+	<script type='text/javascript' src='../lib/ei/eibodynav.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../lib/ei/eihamburger.css' />
+	<script type='text/javascript' src='../lib/ei/eihamburger.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='../res/css/style.css' />
+	<script type='text/javascript' src='../res/js/main.js'></script>
+	<title>Geometry : Awesome Stuff</title>
+</head>
+
+<body>
+	<header id='title' class='ei-title ei-wide ei-light ei-shadow'>
+	</header>
+
+	<nav id='navbar' class='ei-navbar ei-dark ei-shadow'>
+		<ul id='navbar-content'>
+			<li><div class='ei-hamburger' onclick='toggleSideBar(this)'></div></li>
+			<li><a href='../index.html'>Home</a></li>
+			<li class='ei-right'><a href='../about.html'>About</a></li>
+		</ul>
+	</nav>
+
+	<nav id='sidebar' class='ei-sidebar ei-light ei-shadow'>
+		<ul id='sidebar-content'>
+		</ul>
+	</nav>
+
+	<div id='main' class='ei-main ei-plain ei-fit'>
+		<h1>Angles</h1>
+		<article>
+			<p>
+				Angles is a concept that on the outside appears just like line segments. Like line segments, angles can also be measured. In this chapter, we will be using degrees where a full revolution is equivalent to 360 degrees. In addition, angles can also be added, subtracted, multiplied and divided much like how line segments can be added together. The definition of an angle and the congruence axioms associated with angles will provide the framework in which we will prove additivity of angles.
+			</p>
+		</article>
+		<div class='ei-panel'>
+			<h2>Definition 3.1: Angle</h2>
+			<p>Two rays with the same endpoint (angle can also represent the rotation about a certain point)</p>
+		</div>
+		<div class='ei-panel'>
+			<h2>Axiom of Congruence</h2>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Axiom</th>
+					<th>Illustration</th>
+				</tr>
+				<tr>
+					<td>IV. Given $\angle BAC$ and and any ray $\overrightarrow{A'B'}$, there is a unique ray $\overrightarrow{A'C'}$ on a given side of $\overleftrightarrow{A'B'}$ such that $\angle BAC \cong \angle B'A'C'$ (Angle Construction Axiom)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>V. If $\angle A\cong \angle B$ and $\angle B\cong \angle C$, then $\angle A\cong \angle C$ (Transitivity of Angles)</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class='ei-panel'>
+			<h2>Definition 3.2: Supplementary Angles</h2>
+			<p>
+				Suppose $\overrightarrow{AB}$ and $\overrightarrow{AC}$ are opposite rays. Let $D$ be a point that is not on either of those rays. Then the two angles $\angle DAB$ and $\angle DAC$ are supplementary.
+			</p>
+		</div>
+		<p>To actually prove anything, we will need to group angles in a way that is useful to us. Here, the introduction of triangles as figures with 3 angles will help us prove the following theorems regarding supplementary angles. The definition of a triangle is given below.</p>
+		<div class='ei-panel'>
+			<h2>Definition 3.3: Triangle</h2>
+			<p>
+				For any three noncollinear points, $A$, $B$ and $C$, triangle $\triangle ABC$ consists of sides $\overline{AB}$, $\overline{AC}$, and $\overline{BC}$ and interior angles $\angle ABC$, $\angle BAC$, $\angle ACB$.
+			</p>
+		</div>
+		<p>This leads us to the final congruence axiom, which provides the framework for congruency of triangles.</p>
+		<div class='ei-panel'>
+			<h2>Axiom of Congruence</h2>
+			<table class='ei-table ei-fit ei-shadow'>
+				<tr>
+					<th>Axiom</th>
+					<th>Illustration</th>
+				</tr>
+				<tr>
+					<td>VI. Consider two triangles, $\triangle ABC$ and $\triangle A'B'C'$, where $\overline{AB} \cong \overline{A'B'} $ and $\overline{BC} \cong \overline{B'C'}$ and $\angle B \cong \angle B'$ then $\angle A \cong \angle A'$ (Side-Angle-Side Axiom)</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<p>To prove that two triangles are congruent, one must show that all of the corresponding angles and sides are congruent.</p>
+		<div class='ei-panel'>
+			<h2>Definition 3.4: Congruent Triangles</h2>
+			<p>
+				Two triangles $\triangle ABC$ and $\triangle A'B'C'$ are said to be congruent if $\overline{AB} \cong \overline{A'B'}$, $\overline{BC} \cong \overline{B'C'}$ and $\overline{AC} \cong \overline{A'C'}$ and $\angle A \cong \angle A'$, $\angle B \cong \angle B'$ and $\angle C \cong \angle C'$
+		</div>
+		
+	</div>
+	<footer id='info' class='ei-info ei-plain ei-divider-top'>
+	</footer>
+</body>
+
+</html>
