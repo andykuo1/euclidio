@@ -1,4 +1,7 @@
-TODO LIST ():
+# Euclidio
+A tour of geometry. Created by Kobi Hsu and Andrew Kuo in December 2016.
+
+## Todo list
  +Absolute value and norms for LaTex (resolved, use \left|{}\right|)
  +Load the special characters, C,R,Q,Z,N (resolved, use \mathbb)
  -Replace the words on the buttons with the associated images. Does not apply to Home, Proofs, Euclidean Plane, and Cartesian Plane.
@@ -9,7 +12,7 @@ TODO LIST ():
 	-Cartesian Plane (engineering blueprint (straight edge and compass) with measurements [sunny yellow] image)
  -Finish content up to Circles
 
- Images:
+### Images:
  - unravel circles
  - parabolas
  - hyperbolas
@@ -19,11 +22,11 @@ TODO LIST ():
  + segment
  + polygons
 
- Features:
+### Features:
   - Main Menu Overhaul
   - Responsive (For Phone)
   - Scaleable UI / Text
   - Fade in on Scroll / Hover
   - Drop Down Menus
 
- Axioms of Incidence and Order
+### Axioms of Incidence and Order
